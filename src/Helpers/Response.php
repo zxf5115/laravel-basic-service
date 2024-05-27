@@ -1,8 +1,6 @@
 <?php
-namespace Zxf5115\Laravel\Basic\Helpers;
-
-use Log;
-use Response;
+use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\Response;
 
 use Zxf5115\Laravel\Basic\Constant\Code;
 

@@ -32,6 +32,6 @@ class Code
    */
   public static function message($code)
   {
-    return $message[$code] ?: $message[self::ERROR];
+    return self::$message[$code] ?: self::$message[self::ERROR];
   }
 }
