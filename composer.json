@@ -1,0 +1,22 @@
+{
+  "name": "zxf5115/laravel-basic-service",
+  "description": "A Laravel Plugin For Basic Service",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Zhang XiaoFei",
+      "email": "1326336909@qq.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=7.4",
+    "phpoffice/phppresentation": "^1.0.0",
+  },
+  "autoload": {
+    "psr-4": {
+      "Zxf5115\\Laravel\\Basic\\": "src/"
+    }
+  }
+}
