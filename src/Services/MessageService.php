@@ -1,6 +1,8 @@
 <?php
 namespace Zxf5115\Laravel\Basic\Services;
 
+use Response;
+
 use App\Http\Constant\Code;
 
 /**
@@ -8,14 +10,6 @@ use App\Http\Constant\Code;
  */
 class MessageService
 {
-  /**
-   * 消息类型
-   */
-  protected static $_headers = [
-    'content-type' => 'application/json'
-  ];
-
-
   /**
    * @author zhangxiaofei [<1326336909@qq.com>]
    * @dateTime 2024-05-27
@@ -35,13 +29,11 @@ class MessageService
       $data = Code::message($data);
     }
 
-    $response = \Response::json([
+    return Response::json([
       'status' => $code,
       'message' => $message ?: Code::message($code),
       'data' => $data
     ]);
-
-    return $response->withHeaders(self::$_headers);
   }
 
 
@@ -56,12 +48,10 @@ class MessageService
    */
   public static function error($code = 1000)
   {
-    $response = \Response::json([
+    return Response::json([
       'status' => $code,
       'message' => Code::message($code)
     ]);
-
-    return $response->withHeaders(self::$_headers);
   }
 
 
@@ -76,11 +66,9 @@ class MessageService
    */
   public static function message($message, $code = Code::MESSAGE)
   {
-    $response = \Response::json([
+    return Response::json([
       'status'  => $code,
       'message' => $message
     ]);
-
-    return $response->withHeaders(self::$_headers);
   }
 }
