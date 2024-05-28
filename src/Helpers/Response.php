@@ -1,4 +1,6 @@
 <?php
+namespace Zxf5115\Laravel\Basic\Helpers;
+
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Response;
 

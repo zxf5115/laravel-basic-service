@@ -17,9 +17,6 @@
   "autoload": {
     "psr-4": {
       "Zxf5115\\Laravel\\Basic\\": "src/"
-    },
-    "files": [
-      "src/Helpers/Response.php"
-    ]
+    }
   }
 }
